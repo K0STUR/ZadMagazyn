@@ -41,7 +41,7 @@ public class GUI implements IGUI {
 
 
                 default:
-                    System.out.println("Ups");
+                    System.out.println("Ups, wrong number");
                     this.showMainMenu();
                     break;
         }
@@ -67,14 +67,14 @@ public class GUI implements IGUI {
     }
 
     private void takeProduct(){
-        System.out.println("rmv product code");
+        System.out.println("Remove product code");
         String serialNumber = scanner.next();
-        System.out.println("rmv amount of products");
+        System.out.println("Remove amount of products");
         int count = scanner.nextInt();
         if(dataBase.RmvProducts(serialNumber, count)){
-            System.out.println("rmv done!");
+            System.out.println("Remove done!");
         } else{
-            System.out.println("rmverror!");
+            System.out.println("Remove error!");
         }
 
     }
